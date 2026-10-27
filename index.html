@@ -971,44 +971,46 @@ main {
   font-size: 14px;
 }
 
-/* ===== FOOTER ===== */
+/* ===== FOOTER (compact, single row) ===== */
 footer {
   background: var(--black);
   color: #d8d8d8;
-  padding: 48px 32px 24px;
+  padding: 16px 32px 12px;
 }
 footer .foot-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr 1fr;
-  gap: 48px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 44px;
   max-width: 1400px;
-  margin: 0 auto 32px;
+  margin: 0 auto;
 }
-footer .brand img { height: 44px; display: block; margin-bottom: 16px; }
-footer .brand p { font-size: 13px; color: #999; max-width: 280px; margin: 0; }
+footer .brand { display: flex; align-items: center; gap: 14px; margin-right: auto; }
+footer .brand img { height: 22px; display: block; margin: 0; }
+footer .brand p { font-size: 12px; color: #999; margin: 0; }
 footer h4 {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 13px;
-  letter-spacing: 0.2em;
+  font-size: 11px;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: #fff;
-  margin: 0 0 14px;
+  margin: 0 0 2px;
   font-weight: 700;
 }
 footer address {
   font-style: normal;
-  font-size: 13px;
-  line-height: 1.7;
+  font-size: 12px;
+  line-height: 1.5;
   color: #a8a8a8;
 }
 footer .legal {
   border-top: 1px solid var(--rule-dark);
-  padding-top: 20px;
+  margin: 12px auto 0;
+  padding-top: 8px;
   text-align: center;
-  font-size: 12px;
+  font-size: 11px;
   color: #777;
   max-width: 1400px;
-  margin: 0 auto;
 }
 
 /* ===== RESPONSIVE ===== */
@@ -1030,10 +1032,9 @@ footer .legal {
     border-top: 1px solid var(--rule);
     max-height: 70vh;
   }
-  footer .foot-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
 }
 @media (max-width: 540px) {
-  footer .foot-grid { grid-template-columns: 1fr; }
+  footer .brand { margin-right: 0; width: 100%; }
 }
 </style>
 </head>
@@ -1082,9 +1083,7 @@ footer .legal {
     <div>
       <h4>HQ Sweden</h4>
       <address>
-        Västerängsvägen 10<br>
-        542 35 Mariestad<br>
-        Sweden
+        Västerängsvägen 10, 542 35 Mariestad, Sweden
       </address>
     </div>
     <div>
